@@ -1,0 +1,9 @@
+{% extends "base.html" %}
+
+{% block body %}
+<main>
+{% set content = page.content | default(value=section.content)%}
+
+{{ content | safe }}
+</main>
+{% endblock body %}
